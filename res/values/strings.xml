@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DTU Events</string>
+    <string name="request">Request!</string>
+    
+    
+    
+
+
+<string name="login">Log In</string>
+<string name="logout">Log Out</string>
+
+<string name="upcoming">Upcoming Events</string>
+<string name="old">Old Events</string>
+<string name="current">Current Events</string>
+<string name="old_current">Old and Current Events</string>
+<string name="current_upcoming">Current and Upcoming Events</string>
+<string name="all">All Events</string>
+<string name="addpage">Add Page</string>
+<string name="removeinstace">Remove Instance</string>
+<string name="action_canceled">Action canceled</string>
+<string name="instances">Instances</string>
+<string name="events">Events</string>
+<string name="map">Map</string>
+<string name="open">Open</string>
+<string name="back">Back</string>
+<string name="opening_times">Opening times</string>
+<string name="view">View</string>
+</resources>

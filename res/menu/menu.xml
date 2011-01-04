@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	
+	<item android:id="@+id/addpage"
+		  android:icon="@android:drawable/ic_menu_add"
+          android:title="@string/addpage" />
+	<item android:id="@+id/removepage"
+		  android:icon="@android:drawable/ic_menu_close_clear_cancel" android:title="@string/removeinstance"/>
+	<item android:id="@+id/view"
+          android:icon="@android:drawable/ic_menu_view"
+          android:title="@string/view" >
+          <menu>
+          		<item android:id="@+id/all"
+					  android:title="@string/all" />
+          		<item android:id="@+id/old"
+					  android:title="@string/old" />
+          		<item android:id="@+id/current"
+					  android:title="@string/current" />
+				<item android:id="@+id/upcoming"
+					  android:title="@string/upcoming" />
+				<item android:id="@+id/old_current"
+					  android:title="@string/old_current" />
+				<item android:id="@+id/current_upcoming"
+					  android:title="@string/current_upcoming" />
+          </menu>
+	</item>
+</menu>

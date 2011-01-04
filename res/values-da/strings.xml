@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DTU Events</string>
+    <string name="request">Anmod!</string>
+    
+    
+    
+
+
+<string name="login">Log Ind</string>
+<string name="logout">Log Ud</string>
+
+<string name="upcoming">Kommende Begivenheder</string>
+<string name="old">Gamle Begivenheder</string>
+<string name="current">Nuværende Begivenheder</string>
+<string name="old_current">Gamle og Nuværende Begivenheder</string>
+<string name="current_upcoming">Nuværrende og Kommende Begivenheder</string>
+<string name="all">Alle Begivenheder</string>
+<string name="addpage">Add Page</string>
+<string name="removeinstance">Fjern Instans</string>
+<string name="action_canceled">Aktion annuleret</string>
+<string name="instances">Instanser</string>
+<string name="events">Begivenheder</string>
+<string name="map">Kort</string>
+<string name="open">Åben</string>
+<string name="back">Tilbage</string>
+<string name="opening_times">Åbningstider</string>
+<string name="view">Udseende</string>
+</resources>
