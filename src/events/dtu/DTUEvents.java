@@ -64,10 +64,6 @@ import android.widget.ZoomButtonsController.OnZoomListener;
 
 public class DTUEvents extends TabActivity {
 	
-	
-	private static final int SWIPE_MIN_DISTANCE = 120;
-	private static final int SWIPE_MAX_OFF_PATH = 250;
-	private static final int SWIPE_THRESHOLD_VELOCITY = 200;
     public static final String APP_ID = "155925761094385";
     
     private static final String[] PERMISSIONS =
