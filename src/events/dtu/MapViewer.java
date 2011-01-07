@@ -4,6 +4,12 @@ import java.util.ArrayList;
 import java.util.Date;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.ColorMatrix;
+import android.graphics.ColorMatrixColorFilter;
+import android.graphics.Paint;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.location.Location;
 import android.location.LocationListener;
@@ -83,6 +89,23 @@ public class MapViewer extends MapActivity implements LocationListener {
 		return overlays;
 	}
     
+    private Drawable drawableToGrayscale(Drawable drawable) {
+    	Bitmap colorBitmap = ((BitmapDrawable)drawable).getBitmap();
+    	Bitmap grayscaleBitmap = Bitmap.createBitmap(
+    			colorBitmap.getWidth(), colorBitmap.getHeight(),
+    			Bitmap.Config.ARGB_8888);
+
+    	Canvas c = new Canvas(grayscaleBitmap);
+    	Paint p = new Paint();
+    	ColorMatrix cm = new ColorMatrix();
+
+    	cm.setSaturation(0);
+    	ColorMatrixColorFilter filter = new ColorMatrixColorFilter(cm);
+    	p.setColorFilter(filter); 
+    	c.drawBitmap(colorBitmap, 0, 0, p);
+    	return new BitmapDrawable(grayscaleBitmap);
+    }
+    
     private EventOverlay createOverlay(Event event, Instance instance) {
     	Drawable drawable;
     	EventOverlay eventOverlay;
@@ -105,6 +128,7 @@ public class MapViewer extends MapActivity implements LocationListener {
         drawable = this.getResources().getDrawable(bar.drawable).mutate();
         if(!bar.isOpen()) {
         	drawable.setAlpha(60);
+            drawable = drawableToGrayscale(drawable);
         }
         barOverlay = new BarOverlay(drawable, this, bar);
 		
