@@ -19,7 +19,7 @@ public class EventOverlay extends ItemizedOverlay {
 	private Event event;
 
 	public EventOverlay(Drawable defaultMarker, Context context, Event event) {
-		super(boundCenter(defaultMarker));
+		super(boundCenterBottom(defaultMarker));
 		  this.context = context;
 		  this.event = event;
 	}
@@ -29,11 +29,6 @@ public class EventOverlay extends ItemizedOverlay {
 	  OverlayItem item = mOverlays.get(index);
 	  event.showEventInfo(context);
 	  return true;
-	}
-	
-	@Override
-	public void draw(android.graphics.Canvas canvas, MapView mapView, boolean shadow) {
-		super.draw(canvas, mapView, false);
 	}
 	
 	public void addOverlay(OverlayItem overlay) {

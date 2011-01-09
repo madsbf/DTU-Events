@@ -23,12 +23,14 @@ public class Bar extends Instance {
 	public GeoPoint location;
 	public String address;
 	private OpeningTimes openingTimes;
+	public int drawableMap;
 	
 	public Bar(int id, JSONObject json) {
 		super(id, json);
 		try {
 			location = new GeoPoint(json.getInt("locationLatitude"),json.getInt("locationLongitude"));
 			address = json.getString("address");
+			drawableMap = json.getInt("drawable_map");
 			
 			openingTimes = new OpeningTimes();
 			// TODO
@@ -40,11 +42,12 @@ public class Bar extends Instance {
 	
 	public Bar(int id, long fId, String name, String pictureUrl, boolean page,
 			GeoPoint location, String address,
-			OpeningTimes openingTimes, int drawable, int drawableEvent) {
+			OpeningTimes openingTimes, int drawable, int drawableEvent, int drawableMap) {
 		super(id, fId, name, pictureUrl, page, drawable, drawableEvent);
 		this.location = location;
 		this.address = address;
 		this.openingTimes = openingTimes;
+		this.drawableMap = drawableMap;
 	}
 	
 	public boolean isBar() {
@@ -70,6 +73,7 @@ public class Bar extends Instance {
 			json.put("address", address);
 			json.put("drawable", drawable);
 			json.put("drawable_event", drawableEvent);
+			json.put("drawable_map", drawableMap);
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

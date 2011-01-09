@@ -37,7 +37,8 @@ public class InitialData {
 								"H.C. Ørsteds plads, 2800 Kongens Lyngby, Denmark",
 								openingTimes,
 								R.drawable.hegnet,
-								R.drawable.hegnetevent);
+								R.drawable.hegnetevent,
+								R.drawable.hegnetmap);
 		return hegnet;
 	}
 	
@@ -72,7 +73,8 @@ public class InitialData {
 								"DTU byg. 101 indgang E, 2800 Kongens Lyngby, Denmark",
 								openingTimes,
 								R.drawable.shuset,
-								R.drawable.shusetevent);
+								R.drawable.shusetevent,
+								R.drawable.shusetmap);
 		return sHuset;
 	}
 	
@@ -105,7 +107,8 @@ public class InitialData {
 								"",
 								openingTimes,
 								R.drawable.diamanten,
-								R.drawable.diamantenevent);
+								R.drawable.diamantenevent,
+								R.drawable.diamantenmap);
 		return diamanten;
 	}
 	
@@ -127,7 +130,8 @@ public class InitialData {
 								"",
 								openingTimes,
 								R.drawable.diagonalen,
-								R.drawable.diagonalenevent);
+								R.drawable.diagonalenevent,
+								R.drawable.diagonalenmap);
 		return diagonalen;
 	}
 	
@@ -149,7 +153,8 @@ public class InitialData {
 								"",
 								openingTimes,
 								R.drawable.etherrummet,
-								R.drawable.etherrummetevent);
+								R.drawable.etherrummetevent,
+								R.drawable.etherrummetmap);
 		return etherrummet;
 	}
 	
@@ -183,7 +188,8 @@ public class InitialData {
 								"Anker Engelundsvej 1, 2800 Kongens Lyngby, Denmark",
 								openingTimes,
 								R.drawable.etherrummet,
-								R.drawable.etherrummetevent);
+								R.drawable.etherrummetevent,
+								R.drawable.etherrummetmap);
 		return testBar;
 	}
 	

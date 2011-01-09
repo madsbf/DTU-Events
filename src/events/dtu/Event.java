@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -84,13 +85,13 @@ public class Event
 			String city = venue.optString("city");
 			String country = venue.optString("country");
 			if(!street.equals("")) {
-				newAddress = newAddress + ", " + street;
+				newAddress = newAddress + street + ", ";
 			}
 			if(!city.equals("")) {
-				newAddress = newAddress + ", " + city;
+				newAddress = newAddress + city + ", ";
 			}
 			if(!country.equals("")) {
-				newAddress = newAddress + ", " + country;
+				newAddress = newAddress + country;
 			}
 		}
 		
@@ -108,7 +109,7 @@ public class Event
 		}
 		else {
 			if(!newAddress.equals("")) {
-				Geocoder geocoder = new Geocoder(context);
+				Geocoder geocoder = new Geocoder(context, Locale.getDefault());
 				List<Address> addresses;
 				try {
 					addresses = geocoder.getFromLocationName(newAddress, 1);
@@ -126,8 +127,6 @@ public class Event
 						}
 					}
 				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
 				}
 			}
 			

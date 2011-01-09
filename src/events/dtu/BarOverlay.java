@@ -19,7 +19,7 @@ public class BarOverlay extends ItemizedOverlay {
 	private Bar bar;
 
 	public BarOverlay(Drawable defaultMarker, Context context, Bar bar) {
-		super(boundCenter(defaultMarker));
+		super(boundCenterBottom(defaultMarker));
 		  this.context = context;
 		  this.bar = bar;
 	}
@@ -29,11 +29,6 @@ public class BarOverlay extends ItemizedOverlay {
 	  OverlayItem item = mOverlays.get(index);
 	  barView();
 	  return true;
-	}
-	
-	@Override
-	public void draw(android.graphics.Canvas canvas, MapView mapView, boolean shadow) {
-		super.draw(canvas, mapView, false);
 	}
 	
     private void barView() {

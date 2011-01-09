@@ -112,7 +112,7 @@ public class MapViewer extends MapActivity implements LocationListener {
 		
         drawable = this.getResources().getDrawable(instance.drawableEvent).mutate();
         if(!event.isActive(new Date())) {
-            drawable.setAlpha(60);
+            drawable.setAlpha(95);
         }
         eventOverlay = new EventOverlay(drawable, this, event);
 		OverlayItem overlayitem = new OverlayItem(event.location, "", "");
@@ -125,10 +125,10 @@ public class MapViewer extends MapActivity implements LocationListener {
 		Drawable drawable;
 		BarOverlay barOverlay;
 		
-        drawable = this.getResources().getDrawable(bar.drawable).mutate();
+        drawable = this.getResources().getDrawable(bar.drawableMap).mutate();
         if(!bar.isOpen()) {
-        	drawable.setAlpha(60);
             drawable = drawableToGrayscale(drawable);
+        	drawable.setAlpha(95);
         }
         barOverlay = new BarOverlay(drawable, this, bar);
 		
