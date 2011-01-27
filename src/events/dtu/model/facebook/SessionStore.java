@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package events.dtu;
+package events.dtu.model.facebook;
 
 import com.facebook.android.Facebook;
 import android.content.Context;

@@ -1,9 +1,16 @@
-package events.dtu;
+package events.dtu.model;
 
 import java.util.ArrayList;
 import java.util.Calendar;
 
 import com.google.android.maps.GeoPoint;
+
+import events.dtu.R;
+import events.dtu.R.drawable;
+import events.dtu.model.instance.Bar;
+import events.dtu.model.instance.Group;
+import events.dtu.model.instance.Instance;
+import events.dtu.model.openingTime.OpeningTimes;
 
 public class InitialData {
 	

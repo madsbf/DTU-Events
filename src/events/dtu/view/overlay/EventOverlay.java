@@ -1,4 +1,4 @@
-package events.dtu;
+package events.dtu.view.overlay;
 
 import java.util.ArrayList;
 
@@ -11,6 +11,8 @@ import android.graphics.drawable.Drawable;
 import com.google.android.maps.ItemizedOverlay;
 import com.google.android.maps.MapView;
 import com.google.android.maps.OverlayItem;
+
+import events.dtu.model.event.Event;
 
 public class EventOverlay extends ItemizedOverlay {
 	

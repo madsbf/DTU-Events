@@ -1,4 +1,4 @@
-package events.dtu;
+package events.dtu.activities;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -26,8 +26,23 @@ import com.google.android.maps.MapController;
 import com.google.android.maps.MapView;
 import com.google.android.maps.OverlayItem;
 
-import events.dtu.SessionEvents.AuthListener;
-import events.dtu.SessionEvents.LogoutListener;
+import events.dtu.R;
+import events.dtu.R.drawable;
+import events.dtu.R.id;
+import events.dtu.R.layout;
+import events.dtu.R.menu;
+import events.dtu.R.string;
+import events.dtu.model.InitialData;
+import events.dtu.model.event.Event;
+import events.dtu.model.event.EventsList;
+import events.dtu.model.facebook.BaseRequestListener;
+import events.dtu.model.facebook.SessionEvents;
+import events.dtu.model.facebook.SessionStore;
+import events.dtu.model.facebook.SessionEvents.AuthListener;
+import events.dtu.model.facebook.SessionEvents.LogoutListener;
+import events.dtu.model.instance.Bar;
+import events.dtu.model.instance.Group;
+import events.dtu.model.instance.Instance;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.TabActivity;

@@ -1,4 +1,4 @@
-package events.dtu;
+package events.dtu.model.event;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -12,6 +12,9 @@ import org.json.JSONObject;
 
 import com.facebook.android.FacebookError;
 import com.facebook.android.Util;
+
+import events.dtu.model.Variables;
+import events.dtu.model.instance.Instance;
 
 public class EventsList 
 {

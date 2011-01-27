@@ -1,4 +1,4 @@
-package events.dtu;
+package events.dtu.view.overlay;
 
 import java.util.ArrayList;
 
@@ -11,6 +11,9 @@ import android.graphics.drawable.Drawable;
 import com.google.android.maps.ItemizedOverlay;
 import com.google.android.maps.MapView;
 import com.google.android.maps.OverlayItem;
+
+import events.dtu.activities.InstanceViewer;
+import events.dtu.model.instance.Bar;
 
 public class BarOverlay extends ItemizedOverlay {
 	

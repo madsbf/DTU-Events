@@ -1,4 +1,4 @@
-package events.dtu;
+package events.dtu.model.instance;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -18,6 +18,9 @@ import com.facebook.android.FacebookError;
 import com.facebook.android.Util;
 import com.google.android.maps.GeoPoint;
 
+import events.dtu.model.openingTime.OpeningTime;
+import events.dtu.model.openingTime.OpeningTimes;
+
 public class Bar extends Instance {
 	
 	public GeoPoint location;
@@ -31,8 +34,7 @@ public class Bar extends Instance {
 			location = new GeoPoint(json.getInt("locationLatitude"),json.getInt("locationLongitude"));
 			address = json.getString("address");
 			drawableMap = json.getInt("drawable_map");
-			
-			openingTimes = new OpeningTimes();
+			openingTimes = new OpeningTimes(json.getJSONArray("opening_times"));
 			// TODO
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block
@@ -74,6 +76,8 @@ public class Bar extends Instance {
 			json.put("drawable", drawable);
 			json.put("drawable_event", drawableEvent);
 			json.put("drawable_map", drawableMap);
+			json.put("opening_times", openingTimes.toJSON());
+
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

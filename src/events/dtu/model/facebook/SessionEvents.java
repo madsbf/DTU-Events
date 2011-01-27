@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package events.dtu;
+package events.dtu.model.facebook;
 
 import java.util.LinkedList;
 

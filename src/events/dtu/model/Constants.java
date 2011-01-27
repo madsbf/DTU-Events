@@ -1,6 +1,6 @@
-package events.dtu;
+package events.dtu.model;
 
-public class Statics {
+public class Constants {
 
 	public final static int UPPER_BOUND_INT = 55791655;
 	public final static int LOWER_BOUND_INT = 55780073;

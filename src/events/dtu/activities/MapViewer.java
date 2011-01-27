@@ -1,4 +1,4 @@
-package events.dtu;
+package events.dtu.activities;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -27,6 +27,16 @@ import com.google.android.maps.MapController;
 import com.google.android.maps.MapView;
 import com.google.android.maps.MyLocationOverlay;
 import com.google.android.maps.OverlayItem;
+
+import events.dtu.R;
+import events.dtu.R.id;
+import events.dtu.R.layout;
+import events.dtu.model.Constants;
+import events.dtu.model.event.Event;
+import events.dtu.model.instance.Bar;
+import events.dtu.model.instance.Instance;
+import events.dtu.view.overlay.BarOverlay;
+import events.dtu.view.overlay.EventOverlay;
 
 public class MapViewer extends MapActivity implements LocationListener {
 	
@@ -166,10 +176,10 @@ public class MapViewer extends MapActivity implements LocationListener {
 	}
 	
 	private boolean isPositionAtDTU(GeoPoint position) {
-		if(position.getLatitudeE6() > Statics.LOWER_BOUND_INT &&
-			position.getLatitudeE6() < Statics.UPPER_BOUND_INT &&
-			position.getLongitudeE6() > Statics.LEFT_BOUND_INT &&
-			position.getLongitudeE6() < Statics.RIGHT_BOUND_INT) {
+		if(position.getLatitudeE6() > Constants.LOWER_BOUND_INT &&
+			position.getLatitudeE6() < Constants.UPPER_BOUND_INT &&
+			position.getLongitudeE6() > Constants.LEFT_BOUND_INT &&
+			position.getLongitudeE6() < Constants.RIGHT_BOUND_INT) {
 			return true;
 		}
 		return false;

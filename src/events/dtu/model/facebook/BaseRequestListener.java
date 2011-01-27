@@ -1,4 +1,4 @@
-package events.dtu;
+package events.dtu.model.facebook;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;

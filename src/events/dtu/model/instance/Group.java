@@ -1,4 +1,4 @@
-package events.dtu;
+package events.dtu.model.instance;
 
 import java.util.ArrayList;
 

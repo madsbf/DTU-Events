@@ -1,4 +1,4 @@
-package events.dtu;
+package events.dtu.model.event;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -19,6 +19,13 @@ import android.location.Address;
 import com.facebook.android.FacebookError;
 import com.facebook.android.Util;
 import com.google.android.maps.GeoPoint;
+
+import events.dtu.R;
+import events.dtu.R.string;
+import events.dtu.activities.DTUEvents;
+import events.dtu.model.Constants;
+import events.dtu.model.instance.Bar;
+import events.dtu.model.instance.Instance;
 
 public class Event 
 {
@@ -117,10 +124,10 @@ public class Event
 						if(!addresses.isEmpty()) {
 							int latitudeE6 = (int) (addresses.get(0).getLatitude() * 1E6);
 							int longitudeE6 = (int) (addresses.get(0).getLongitude() * 1E6);
-							if(latitudeE6 < Statics.LOWER_BOUND_DOUBLE
-									|| latitudeE6 >  Statics.UPPER_BOUND_DOUBLE
-									|| longitudeE6 < Statics.LEFT_BOUND_DOUBLE
-									|| longitudeE6 > Statics.RIGHT_BOUND_DOUBLE) {
+							if(latitudeE6 < Constants.LOWER_BOUND_DOUBLE
+									|| latitudeE6 >  Constants.UPPER_BOUND_DOUBLE
+									|| longitudeE6 < Constants.LEFT_BOUND_DOUBLE
+									|| longitudeE6 > Constants.RIGHT_BOUND_DOUBLE) {
 								atDTU = false;
 							}
 							location = new GeoPoint(latitudeE6, longitudeE6);

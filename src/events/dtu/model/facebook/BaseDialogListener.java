@@ -1,4 +1,4 @@
-package events.dtu;
+package events.dtu.model.facebook;
 
 import com.facebook.android.DialogError;
 import com.facebook.android.FacebookError;

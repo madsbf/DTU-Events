@@ -1,4 +1,4 @@
-package events.dtu;
+package events.dtu.model.instance;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -15,6 +15,11 @@ import android.content.DialogInterface;
 import com.facebook.android.FacebookError;
 import com.facebook.android.Util;
 import com.google.android.maps.GeoPoint;
+
+import events.dtu.R;
+import events.dtu.R.string;
+import events.dtu.activities.DTUEvents;
+import events.dtu.model.event.Event;
 
 public abstract class Instance {
 

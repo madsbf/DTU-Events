@@ -1,6 +1,11 @@
-package events.dtu;
+package events.dtu.activities;
 
 import java.util.ArrayList;
+
+import events.dtu.R;
+import events.dtu.R.id;
+import events.dtu.R.layout;
+import events.dtu.model.event.Event;
 
 import android.app.Activity;
 import android.content.Context;

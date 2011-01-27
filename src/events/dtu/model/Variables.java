@@ -1,4 +1,6 @@
-package events.dtu;
+package events.dtu.model;
+
+import events.dtu.model.event.EventsList;
 
 public class Variables 
 {
