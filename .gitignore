@@ -1,5 +1,2 @@
-/bin
-/com_facebook_android
-/com_facebook_android_src
-/gen
-/.settings
+com_facebook_android_src
+gen
