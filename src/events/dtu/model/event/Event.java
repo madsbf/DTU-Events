@@ -41,7 +41,7 @@ public class Event
 	private boolean loaded = false;
 	
 	private int attendants = 0;
-	public GeoPoint location;
+	public GeoPoint location = null;
 	private float distance = 0f;
 
 	public Event(String name,
@@ -85,6 +85,7 @@ public class Event
 	
 	private void initializeLocation(JSONObject json, Context context) {
 		String loc = json.optString("location");
+		String locLower = loc.toLowerCase();
 		String newAddress = "";
 		JSONObject venue = json.optJSONObject("venue");
 		if(venue != null) {
@@ -102,6 +103,7 @@ public class Event
 			}
 		}
 		
+		// GeoPoint inkluderet i Facebook-teksten - 1. prioritet
 		if(loc.contains("GeoPoint(")) {
 			int index = loc.indexOf("GeoPoint(");
 			int latitudeE6 = (int) (Float.parseFloat(loc.substring(index + 9, index + 18)) * 1E6);
@@ -115,7 +117,40 @@ public class Event
 			location = new GeoPoint(latitudeE6, longitudeE6);
 		}
 		else {
-			if(!newAddress.equals("")) {
+			int buildingIndex = -1;
+			if(locLower.contains("byg."))
+			{
+				buildingIndex = locLower.indexOf("byg.") + 5;
+			}
+			else if(locLower.contains("bygn."))
+			{
+				buildingIndex = locLower.indexOf("bygn.") + 6;	
+			}
+			else if(locLower.contains("byg"))
+			{
+				buildingIndex = locLower.indexOf("bygn.") + 4;	
+			}
+			else if(locLower.contains("bygn"))
+			{
+				buildingIndex = locLower.indexOf("bygn.") + 5;	
+			}
+			else if(locLower.contains("bygning"))
+			{
+				buildingIndex = locLower.indexOf("bygning") + 8;
+			}
+			
+			if(buildingIndex != -1)
+			{
+				char trailingChar = locLower.charAt(buildingIndex + 3);
+				int charAmount = 3;
+				if(trailingChar != ' ' && trailingChar != ',')
+				{
+					charAmount = 4;
+				}
+				location = Constants.BUILDINGS.get(locLower.substring(buildingIndex, buildingIndex + charAmount));
+			}
+			
+			if(!newAddress.equals("") && location == null) {
 				Geocoder geocoder = new Geocoder(context, Locale.getDefault());
 				List<Address> addresses;
 				try {
@@ -157,6 +192,7 @@ public class Event
 			JSONObject json = Util.parseJson(jsonString);
 			description = json.optString("description");
 			initializeLocation(json, context);
+			loaded = true;
 			
 		} catch (MalformedURLException e) {
 			// TODO Auto-generated catch block
@@ -176,7 +212,6 @@ public class Event
 	public void showEventInfo(Context context) {
 		if(!loaded) {
 			loadInfo(context);
-			loaded = true;
 		}
 	    AlertDialog.Builder builder = new AlertDialog.Builder(context);
     	builder.setTitle(name)

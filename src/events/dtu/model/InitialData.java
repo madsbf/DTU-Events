@@ -22,7 +22,7 @@ public class InitialData {
 		instances.add(diamanten());
 		instances.add(diagonalen());
 		instances.add(etherrummet());
-		instances.add(testBar());
+		// instances.add(testBar());
 		return instances;
 	}
 	
@@ -40,7 +40,7 @@ public class InitialData {
 								"Hegnet",
 								"http://profile.ak.fbcdn.net/hprofile-ak-snc4/hs223.ash2/50254_27992501059_5168_s.jpg",
 								true,
-								new GeoPoint(55782329,12517054),
+								Constants.SPECIAL_PLACES.get("hegnet"),
 								"H.C. Ørsteds plads, 2800 Kongens Lyngby, Denmark",
 								openingTimes,
 								R.drawable.hegnet,
@@ -76,7 +76,7 @@ public class InitialData {
 								"S-Huset",
 								"http://profile.ak.fbcdn.net/hprofile-ak-snc4/hs322.snc4/41573_27128934931_9741_s.jpg",
 								true,
-								new GeoPoint(55786459, 12525696),
+								Constants.SPECIAL_PLACES.get("s-huset"),
 								"DTU byg. 101 indgang E, 2800 Kongens Lyngby, Denmark",
 								openingTimes,
 								R.drawable.shuset,
@@ -110,7 +110,7 @@ public class InitialData {
 								"Diamanten",
 								"",
 								false,
-								new GeoPoint(55782643,12521174),
+								Constants.SPECIAL_PLACES.get("diamanten"),
 								"",
 								openingTimes,
 								R.drawable.diamanten,
@@ -133,7 +133,7 @@ public class InitialData {
 								"Diagonalen",
 								"",
 								false,
-								new GeoPoint(55789240,12525648),
+								Constants.SPECIAL_PLACES.get("diagonalen"),
 								"",
 								openingTimes,
 								R.drawable.diagonalen,
@@ -156,7 +156,7 @@ public class InitialData {
 								"Etherrummet",
 								"",
 								false,
-								new GeoPoint(55787523,12518406),
+								Constants.SPECIAL_PLACES.get("etherrummet"),
 								"",
 								openingTimes,
 								R.drawable.etherrummet,
