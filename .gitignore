@@ -1,3 +1,5 @@
-bin
-com_facebook_android
-gen/bin
+/bin
+/com_facebook_android
+/com_facebook_android_src
+/gen
+/.settings
