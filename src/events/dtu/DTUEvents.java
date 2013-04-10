@@ -357,6 +357,33 @@ public class DTUEvents extends TabActivity {
                 }
             });
         }
+
+		public void onComplete(String response, Object state) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		public void onIOException(IOException e, Object state) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		public void onFileNotFoundException(FileNotFoundException e,
+				Object state) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		public void onMalformedURLException(MalformedURLException e,
+				Object state) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		public void onFacebookError(FacebookError e, Object state) {
+			// TODO Auto-generated method stub
+			
+		}
     }
     
     private class SessionListener implements AuthListener, LogoutListener {
